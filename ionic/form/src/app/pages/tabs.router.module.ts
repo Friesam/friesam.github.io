@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs/tabs.page';
 
 const routes: Routes = [
-  { path: 'roles',
+  { path: 'tabs',
     component: TabsPage,
     children: [
       {
