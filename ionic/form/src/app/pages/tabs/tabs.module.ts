@@ -6,20 +6,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { TabsPage } from './tabs.page';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: TabsPage
-  }
-];
+import { TabsRouterModule } from '../tabs.router.module'
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    TabsRouterModule
   ],
   declarations: [TabsPage]
 })

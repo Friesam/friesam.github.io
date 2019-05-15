@@ -1,9 +1,67 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>details</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+    <ion-toolbar>
+      <ion-title>details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+      <div>
+          <form>
+            <ion-grid>
+              <ion-row>
+                <ion-col>
+                    <ion-input
+                    type="text"
+                    placeholder="Enter your Team name"
+                    >
+                    </ion-input>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                    <ion-input
+                    type="text"
+                    placeholder="Create a password"
+                    >
+                    </ion-input>
+                </ion-col>
+                <span>
+                  <ion-checkbox>
+                    Show password
+                  </ion-checkbox>
+                </span>
+              </ion-row>
+              <ion-col>
+                <ion-button
+                size="large"
+                type="submit" 
+                color="success"
+                (click)="coachReg()"
+                >
+                Continue to Sign-Up
+                <ion-icon name="fastforward"></ion-icon>
+                </ion-button>
+              </ion-col>
+        
+              <ion-col>
+                  <ion-button
+                  size="large"
+                  color="danger" 
+                  (click)="cancel()">
+                  Cancel
+                  </ion-button>
+                </ion-col>
+                <span>
+                    I already have an account
+                    <ion-button
+                        size="small"
+                        color="success" 
+                        (click)="login()">
+                        Login
+                    </ion-button>
+                  </span>
+            </ion-grid>
+          </form>
+        </div>
+  </ion-content>
+  
