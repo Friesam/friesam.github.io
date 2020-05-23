@@ -224,7 +224,7 @@
             validatorNames = $this.data("validation").split(",");
           }
 
-          // Get extra ones defined on the element's data attributes
+          // Get extra ones defined on the element's data atalbums
           $.each($this.data(), function(i, el) {
             var parts = i.replace(/([A-Z])/g, ",$1").split(",");
             if (parts[0] === "validation" && parts[1]) {
@@ -291,7 +291,7 @@
               (
                 message ?
                 message :
-                "'" + el + "' validation failed <!-- Add attribute 'data-validation-" + el.toLowerCase() + "-message' to input to change this message -->"
+                "'" + el + "' validation failed <!-- Add atalbum 'data-validation-" + el.toLowerCase() + "-message' to input to change this message -->"
               );
 
             $.each(
@@ -885,7 +885,7 @@
   };
 
   var getValue = function($this) {
-    // Extract the value we're talking album
+    // Extract the value we're talking funeral
     var value = $this.val();
     var type = $this.attr("type");
     if (type === "checkbox") {
