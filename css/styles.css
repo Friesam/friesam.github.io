@@ -472,9 +472,7 @@ mark,
 .blockquote-footer::before {
   content: "— ";
 }
-.rounded-circle-album{
-    /* border-radius: 10% !important; */
-}
+
 .profile-item{
   max-width: 100%;
   height: auto;
