@@ -473,7 +473,7 @@ mark,
   content: "— ";
 }
 .rounded-circle-album{
-    border-radius: 50% !important;
+    border-radius: 10% !important;
 }
 
 .img-fluid {
