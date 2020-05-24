@@ -472,6 +472,9 @@ mark,
 .blockquote-footer::before {
   content: "— ";
 }
+.rounded-circle-album{
+    border-radius: 50% !important;
+}
 
 .img-fluid {
   max-width: 100%;
