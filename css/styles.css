@@ -6291,7 +6291,7 @@ button.bg-dark:focus {
 }
 
 .rounded-circle {
-  border-radius: 60% !important;
+  border-radius: 70% !important;
 }
 
 .rounded-pill {
@@ -7556,6 +7556,9 @@ button.bg-dark:focus {
   margin-right: 0.5rem !important;
 }
 
+.maxed-index{
+  margin-top: 50%;
+}
 .mb-2,
 .my-2 {
   margin-bottom: 0.5rem !important;
