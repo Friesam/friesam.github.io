@@ -475,6 +475,10 @@ mark,
 .rounded-circle-album{
     /* border-radius: 10% !important; */
 }
+.album-item{
+width: 20em;
+height: 30em;
+}
 
 .img-fluid {
   max-width: 100%;
