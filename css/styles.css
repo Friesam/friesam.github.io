@@ -6291,7 +6291,7 @@ button.bg-dark:focus {
 }
 
 .rounded-circle {
-  border-radius: 50% !important;
+  border-radius: 10% !important;
 }
 
 .rounded-pill {
@@ -10357,6 +10357,10 @@ header.masthead .masthead-heading {
 .timeline .timeline-body > ul,
 .timeline .timeline-body > p {
   margin-bottom: 0;
+}
+
+timeline-header{
+  text-align: center;
 }
 
 @media (min-width: 768px) {
