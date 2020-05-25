@@ -6679,8 +6679,8 @@ button.bg-dark:focus {
   align-items: center !important;
 }
 .footer-padding{
-  padding: 7em;
-  background-color: dimgray;
+  padding: 7em !important;
+  background-color: dimgray !important;
 }
 
 .align-items-baseline {
