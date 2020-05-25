@@ -1,6 +1,6 @@
 $(function () {
     $(
-        "#contactForm input,#contactForm textarea,#contactForm button"
+        "#tributeForm input,#tributeForm textarea,#tributeForm button"
     ).jqBootstrapValidation({
         preventSubmit: true,
         submitError: function ($form, event, errors) {
@@ -21,7 +21,7 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "/assets/mail/contact_me.php",
+                url: "/assets/mail/tribute_me.php",
                 type: "POST",
                 data: {
                     name: name,
@@ -43,7 +43,7 @@ $(function () {
                     );
                     $("#success > .alert-success").append("</div>");
                     //clear all fields
-                    $("#contactForm").trigger("reset");
+                    $("#tributeForm").trigger("reset");
                 },
                 error: function () {
                     // Fail message
@@ -62,7 +62,7 @@ $(function () {
                     );
                     $("#success > .alert-danger").append("</div>");
                     //clear all fields
-                    $("#contactForm").trigger("reset");
+                    $("#tributeForm").trigger("reset");
                 },
                 complete: function () {
                     setTimeout(function () {

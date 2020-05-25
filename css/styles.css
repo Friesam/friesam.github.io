@@ -497,10 +497,9 @@ height: 30em;
 }
 .zoom {
   padding: 50px;
-  background-color: green;
   transition: transform .2s; /* Animation */
-  width: 200px;
-  height: 200px;
+  width: 130%;
+  height: 300px;
   margin: 0 auto;
 }
 
@@ -10507,55 +10506,55 @@ header.masthead .masthead-heading {
   margin-bottom: 0;
 }
 
-section#contact {
+section#tribute {
   background-color: #212529;
   background-image: url("../assets/img/map-image.png");
   background-repeat: no-repeat;
   background-position: center;
 }
-section#contact .section-heading {
+section#tribute .section-heading {
   color: #fff;
 }
-section#contact form#contactForm .form-group {
+section#tribute form#tributeForm .form-group {
   margin-bottom: 1.5rem;
 }
-section#contact form#contactForm .form-group input,
-section#contact form#contactForm .form-group textarea {
+section#tribute form#tributeForm .form-group input,
+section#tribute form#tributeForm .form-group textarea {
   padding: 1.25rem;
 }
-section#contact form#contactForm .form-group input.form-control {
+section#tribute form#tributeForm .form-group input.form-control {
   height: auto;
 }
-section#contact form#contactForm .form-group-textarea {
+section#tribute form#tributeForm .form-group-textarea {
   height: 100%;
 }
-section#contact form#contactForm .form-group-textarea textarea {
+section#tribute form#tributeForm .form-group-textarea textarea {
   height: 100%;
   min-height: 10rem;
 }
-section#contact form#contactForm p.help-block {
+section#tribute form#tributeForm p.help-block {
   margin: 0;
 }
-section#contact form#contactForm .form-control:focus {
+section#tribute form#tributeForm .form-control:focus {
   border-color: #fed136;
   box-shadow: none;
 }
-section#contact form#contactForm ::-webkit-input-placeholder {
+section#tribute form#tributeForm ::-webkit-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #ced4da;
 }
-section#contact form#contactForm :-moz-placeholder {
+section#tribute form#tributeForm :-moz-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #ced4da;
 }
-section#contact form#contactForm ::-moz-placeholder {
+section#tribute form#tributeForm ::-moz-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #ced4da;
 }
-section#contact form#contactForm :-ms-input-placeholder {
+section#tribute form#tributeForm :-ms-input-placeholder {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   color: #ced4da;
