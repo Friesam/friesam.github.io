@@ -9784,7 +9784,7 @@ button.bg-dark:focus {
   text-transform: uppercase!important;
 }
 
-.text-capitalize {
+.text-capitalize-headings{
   text-transform: capitalize!important;
   color: black;
 }
