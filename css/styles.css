@@ -9780,11 +9780,11 @@ button.bg-dark:focus {
 }
 
 .text-uppercase {
-  text-transform: uppercase!important;
+  text-transform: uppercase !important;
 }
 
 .text-capitalize-headings{
-  text-transform: capitalize!important;
+  text-transform: capitalize !important;
   color: black;
 }
 
