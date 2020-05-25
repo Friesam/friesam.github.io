@@ -574,7 +574,7 @@ pre code {
 }
 
 .footer-container{
-  /* background-color: #212529; */
+  background-color: dimgray !important;
   width: 100%;
   height: 20em;
 }
@@ -6683,7 +6683,7 @@ button.bg-dark:focus {
 }
 .footer-padding{
   padding: 7em !important;
-  background-color: dimgray !important;
+  /* background-color: dimgray !important; */
 }
 
 .align-items-baseline {
