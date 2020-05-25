@@ -492,7 +492,7 @@ height: 30em;
 .img-fluid-profile{
   width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 40%;
 }
 
 .img-thumbnail {
@@ -6677,6 +6677,10 @@ button.bg-dark:focus {
 
 .align-items-center {
   align-items: center !important;
+}
+.footer-padding{
+  padding: 7em;
+  background-color: dimgray;
 }
 
 .align-items-baseline {
