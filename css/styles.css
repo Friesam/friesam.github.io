@@ -478,7 +478,7 @@ mark,
   height: auto;
 }
 
-.album-item{
+.gallery-item{
 width: 20em;
 height: 30em;
 }
@@ -9782,6 +9782,7 @@ button.bg-dark:focus {
 
 .text-uppercase {
   text-transform: uppercase !important;
+  color: black;
 }
 
 .text-capitalize {
@@ -10199,17 +10200,17 @@ header.masthead .masthead-heading {
     margin-bottom: 4rem;
   }
 }
-#album .album-item {
+#gallery .gallery-item {
   max-width: 25rem;
   margin-left: auto;
   margin-right: auto;
 }
-#album .album-item .album-link {
+#gallery .gallery-item .gallery-link {
   position: relative;
   display: block;
   margin: 0 auto;
 }
-#album .album-item .album-link .album-hover {
+#gallery .gallery-item .gallery-link .gallery-hover {
   display: flex;
   position: absolute;
   width: 100%;
@@ -10220,57 +10221,57 @@ header.masthead .masthead-heading {
   opacity: 0;
   transition: opacity ease-in-out 0.25s;
 }
-#album .album-item .album-link .album-hover .album-hover-content {
+#gallery .gallery-item .gallery-link .gallery-hover .gallery-hover-content {
   font-size: 1.25rem;
   color: white;
 }
-#album .album-item .album-link:hover .album-hover {
+#gallery .gallery-item .gallery-link:hover .gallery-hover {
   opacity: 1;
 }
-#album .album-item .album-caption {
+#gallery .gallery-item .gallery-caption {
   padding: 1.5rem;
   text-align: center;
   background-color: #fff;
 }
-#album .album-item .album-caption .album-caption-heading {
+#gallery .gallery-item .gallery-caption .gallery-caption-heading {
   font-size: 1.5rem;
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
 }
-#album .album-item .album-caption .album-caption-subheading {
+#gallery .gallery-item .gallery-caption .gallery-caption-subheading {
   font-style: italic;
   font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.album-modal .modal-dialog {
+.gallery-modal .modal-dialog {
   margin: 1rem;
   max-width: 100vw;
 }
-.album-modal .modal-content {
+.gallery-modal .modal-content {
   padding-top: 6rem;
   padding-bottom: 6rem;
   text-align: center;
 }
-.album-modal .modal-content h2 {
+.gallery-modal .modal-content h2 {
   font-size: 3rem;
   line-height: 3rem;
 }
-.album-modal .modal-content p.item-intro {
+.gallery-modal .modal-content p.item-intro {
   font-style: italic;
   margin-bottom: 2rem;
   font-family: "Droid Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.album-modal .modal-content p {
+.gallery-modal .modal-content p {
   margin-bottom: 2rem;
 }
-.album-modal .modal-content ul.list-inline {
+.gallery-modal .modal-content ul.list-inline {
   margin-bottom: 2rem;
 }
-.album-modal .modal-content img {
+.gallery-modal .modal-content img {
   margin-bottom: 2rem;
 }
-.album-modal .close-modal {
+.gallery-modal .close-modal {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
@@ -10279,7 +10280,7 @@ header.masthead .masthead-heading {
   cursor: pointer;
   background-color: transparent;
 }
-.album-modal .close-modal:hover {
+.gallery-modal .close-modal:hover {
   opacity: 0.3;
 }
 
