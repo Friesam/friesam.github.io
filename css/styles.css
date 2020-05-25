@@ -496,9 +496,8 @@ height: 30em;
   opacity: 1;
 }
 .zoom {
-  padding: 50px;
   transition: transform .2s; /* Animation */
-  width: 130%;
+  width: 120%;
   height: 300px;
   margin: 0 auto;
 }
