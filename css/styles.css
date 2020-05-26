@@ -505,6 +505,9 @@ height: 30em;
 .zoom:hover {
   transform: scale(1.5); 
 }
+#posts-list.has-comments li.no-comments {
+  display: none;
+}
 
 .img-thumbnail {
   padding: 0.25rem;
