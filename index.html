@@ -97,7 +97,9 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Tribute</h2>
                 </div>
-                <form id="tributeForm" name="sentMessage" method="POST" action="post_comment.php" novalidate="novalidate">
+            <section id="content" class="body">
+                <form id="tributeForm" name="sentMessage" method="POST" novalidate="novalidate">
+                    <!-- <form id="tributeForm" name="sentMessage" method="POST" action="post_comment.php" novalidate="novalidate"> -->
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -118,31 +120,42 @@
                     </div>
                     <div class="text-center">
                         <div id="success"></div>
+                        <!-- <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />                         -->
                         <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
                     </div>
                 </form>
             </div>
         </section>
-        <!-- <section id="comments">
+	</section>
+        <section id="comments">
             <header>
                 <h2>Comments</h2>
             </header>
-        <ol id="posts-list" class="hfeed">
-          <li><article id="comment_1" class="hentry">	
-                    <footer class="post-info">
-                        <abbr class="published" title="Thu, 23 Feb 2012 23:54:46 +0000">
-                            23 February 2012
+            <!-- <ol id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':’); ?>">
+                <li class="no-comments">Be the first to add a comment.</li>
+                <?php
+                    foreach ($comments as $comment) {
+                    ?>
+                    <li><article id="comment_<?php echo($comment['id']); ?>" class="hentry">  
+                        <footer class="post-info">
+                        <abbr class="published" title="<?php echo($comment['date']); ?>">
+                            <?php echo( date('d F Y', strtotime($comment['date']) ) ); ?>
                         </abbr>
+
                         <address class="vcard author">
-                            By <a class="url fn" href="#">Phil Leggetter</a>
+                            By <a class="url fn" href="#"><?php echo($comment['comment_author']); ?></a>
                         </address>
-                    </footer>
-                    <div class="entry-content">
-                        <p>The Realtime Web Rocks!</p>
-                    </div>
-                </article></li>
-            </ol>
-        </section> -->
+                        </footer>
+
+                        <div class="entry-content">
+                        <p><?php echo($comment['comment']); ?></p>
+                        </div>
+                    </article></li>
+                    <?php
+                    }
+                ?>
+            </ol> -->
+        </section>
         <!-- gallery Grid-->
         <section class="page-section bg-light" id="gallery">
             <div class="container">
