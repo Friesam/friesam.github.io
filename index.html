@@ -98,7 +98,9 @@
                     <h2 class="section-heading text-uppercase">Tribute</h2>
                 </div>
             <section id="content" class="body">
-                <form id="tributeForm" name="sentMessage" method="POST" action="post_comment.php" novalidate="novalidate">
+                <form id="tributeForm" name="sentMessage" method="POST" novalidate="novalidate">
+                    <!-- <form id="tributeForm" name="sentMessage" method="POST" action="post_comment.php" novalidate="novalidate"> -->
+
                     <div class="row align-items-stretch mb-5">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -124,7 +126,7 @@
                     </div>
                     <div class="text-center">
                         <div id="success"></div>
-                        <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />                        
+                        <!-- <input type="hidden" name="comment_post_ID" value="<?php echo($comment_post_ID); ?>" id="comment_post_ID" />                         -->
                         <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
                     </div>
                 </form>
@@ -137,7 +139,7 @@
             </header>
             <ol id="posts-list" class="hfeed<?php echo($has_comments?' has-comments':’); ?>">
                 <li class="no-comments">Be the first to add a comment.</li>
-                <?php
+                <!-- <?php
                     foreach ($comments as $comment) {
                     ?>
                     <li><article id="comment_<?php echo($comment['id']); ?>" class="hentry">  
@@ -156,7 +158,7 @@
                         </div>
                     </article></li>
                     <?php
-                    }
+                    } -->
                 ?>
             </ol>
         </section>
