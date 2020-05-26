@@ -3,9 +3,9 @@ require('Persistence.php');
 
 $db = new Persistence();
 if( $db->add_comment($_POST) ) {
-  header( 'Location: index.html' );
+  header( 'Location: index.php' );
 }
 else {
-  header( 'Location: index.html?error=Your comment was not posted due to errors in your form submission' );
+  header( 'Location: index.php?error=Your comment was not posted due to errors in your form submission' );
 }
 ?>

@@ -40,7 +40,7 @@ class Persistence {
     
     $comment_post_ID = $vars['comment_post_ID'];
     $input = array(
-     'comment_author' => $vars['comment_author'],
+     'name' => $vars['name'],
      'email' => $vars['email'],
      'comment' => $vars['comment'],
      'comment_post_ID' => $comment_post_ID,
@@ -80,11 +80,11 @@ class Persistence {
       return false;
     }
     
-    $input['comment_author'] = substr($input['comment_author'], 0, 70);
-    if($this->check_string($input['comment_author']) == false) {
+    $input['name'] = substr($input['name'], 0, 70);
+    if($this->check_string($input['name']) == false) {
       return false;
     }
-    $input['comment_author'] = htmlentities($input['comment_author']);
+    $input['name'] = htmlentities($input['name']);
 
     $input['comment'] = substr($input['comment'], 0, 300);
     if($this->check_string($input['comment'], 5) == false) {
