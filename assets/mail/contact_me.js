@@ -21,7 +21,7 @@ $(function () {
             $this = $("#sendMessageButton");
             $this.prop("disabled", true); // Disable submit button until AJAX call is complete to prevent duplicate messages
             $.ajax({
-                url: "/assets/mail/tribute_me.php",
+                url: "/assets/mail/post_comment.php",
                 type: "POST",
                 data: {
                     name: name,
@@ -63,14 +63,7 @@ $(function () {
                     $("#success > .alert-danger").append("</div>");
                     //clear all fields
                     $("#tributeForm").trigger("reset");
-                },
-                complete: function () {
-                    setTimeout(function () {
-                        $this.prop("disabled", false); // Re-enable submit button when AJAX call is complete
-                    }, 1000);
-                },
-            });
-        },
+        }
         filter: function () {
             return $(this).is(":visible");
         },
