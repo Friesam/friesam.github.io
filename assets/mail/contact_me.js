@@ -43,28 +43,25 @@ $(function () {
                     // );
                     // $("#success > .alert-success").append("</div>");
                     $(document).ready(function() {
-                        $('button').click(function() {
-                            var comment = $('.commentBox').val();
+                        $('#sendMessageButton').click(function() {
+                            var comment = $('#message').val();
                             $('<li>').text(comment).prependTo('.comments');
-                            $('button').attr('disabled', 'true');
-                            $('.commentBox').val('');
+                            $('#sendMessageButton').attr('disabled', 'true');
+                            $('#message').val('');
                         });
                         
-                        $('.commentBox').keyup(function() {
-                            var commentLength = $(this).val().length;
-                            var charLeft =  1200 - commentLength;
-                            $('.counter').text(charLeft);
-                            
+                        $('#message').keyup(function() {
+                            var commentLength = $(this).val().length;                            
                             if (commentLength == 0) {
-                                $('button').attr('disabled', 'true');
+                                $('#sendMessageButton').attr('disabled', 'true');
                             }
                         
                             else {
-                                $('button').removeAttr('disabled', 'true');
+                                $('#sendMessageButton').removeAttr('disabled', 'true');
                             }
                         });
                         
-                        $('button').attr('disabled', 'true');
+                        $('#sendMessageButton').attr('disabled', 'true');
                         
                     });
                     //clear all fields
