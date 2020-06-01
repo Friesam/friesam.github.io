@@ -86,11 +86,11 @@ class Persistence {
     }
     $input['name'] = htmlentities($input['name']);
 
-    $input['comment'] = substr($input['comment'], 0, 300);
-    if($this->check_string($input['comment'], 5) == false) {
+    $input['message'] = substr($input['message'], 0, 300);
+    if($this->check_string($input['message'], 5) == false) {
       return false;
     }
-    $input['comment'] = htmlentities($input['comment']);
+    $input['message'] = htmlentities($input['message']);
 
     $input['comment_post_ID'] = filter_var($input['comment_post_ID'], FILTER_VALIDATE_INT);  
     if (filter_var($input['comment_post_ID'], FILTER_VALIDATE_INT) == false) {
