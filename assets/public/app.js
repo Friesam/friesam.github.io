@@ -25,13 +25,18 @@ var name = getInputValue('name');
 var email = getInputValue('email');
 var message = getInputValue('message');
 
-function gotData(data){
-    var commentListings = selectAll('.commentListing')
-    for (var i=0; i< commentListings.length; i++)
-    {
-        commentListings[i].remove();
-    }
+function pageLoaded(){
+    document.getElementById('commentListings').reset();
+}
 
+window.onload = pageLoaded();
+
+function gotData(data){
+
+    // for (var i=0; i< commentListings.length; i++)
+    // {
+    //     commentListings[i].remove();
+    // }
     var tributeMessages = data.val();
     var keys = Object.keys(tributeMessages)
     for (var i =0; i<keys.length; i++){
@@ -39,15 +44,15 @@ function gotData(data){
         var name = tributeMessages[k].name;
         var email = tributeMessages[k].email;
         var message = tributeMessages[k].message;
-        console.log("name"+name)
-        console.log("email" +email)
-        console.log("message"+message)
 
-        var li = document.createElement('li', name + ': ' 
-        + email + ': '
-        +  message)
-        li.className('commentListing')
-        li.$('#commentList').append(parent())
+        // var li = document.createElement('li', name + ': ' 
+        // + email + ': '
+        // +  message)
+        // li.className('commentListing')
+        // li.$('#commentList').append(parent())
+        $('<li>').text(name).prependTo('.comments');
+        $('<li>').text(message).prependTo('.comments');
+
     }
 }
 
@@ -57,12 +62,17 @@ function errData(err){
 
 function submitForm(e){
     e.preventDefault();
-    console.log(name + email +" and" + message)
+    var name = getInputValue('name');
+    var email = getInputValue('email');
+    var message = getInputValue('message');
+    console.log(name + email + message)
     saveMessages(name, email, message);
 
     // document.querySelector('.alert').style.display = 'block';
     // document.querySelector('.alert').text(name).prependTo('.comments');
     $('<li>').text(name).prependTo('.comments');
+    $('<li>').text(message).prependTo('.comments');
+
 //     setTimeout(function(){
 //         document.querySelector('.alert').style.display = 'none';
 //     },300);
@@ -70,12 +80,12 @@ function submitForm(e){
 //     document.getElementById('tributeForm').reset(); 
 }
 
-$(document).ready(function() {
-	$('button').click(function() {
-		$('<li>').text(name).prependTo('.comments');
-		$(name).val('');
-	});
-});
+// $(document).ready(function() {
+// 	$('button').click(function() {
+// 		$('<li>').text(name).prependTo('.comments');
+// 		$(name).val('');
+// 	});
+// });
 function getInputValue(id){
     return document.getElementById(id).value;
 }
