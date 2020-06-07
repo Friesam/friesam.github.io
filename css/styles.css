@@ -10516,7 +10516,7 @@ header.masthead .masthead-heading {
   padding: 10px;
   margin: 10px 0;
   list-style-type: none;
-  word-wrap: break-word;
+  margin-left: -1.5em;
 }
 #commentListings ul{
 vertical-align: baseline;
@@ -10524,7 +10524,6 @@ vertical-align: baseline;
 ul.clearfix.comments span{
   text-transform: capitalize;
   float: left;
-  margin-left: 20px;
   margin-right:0;
   font-weight: bold;
   padding-right: 1em;
