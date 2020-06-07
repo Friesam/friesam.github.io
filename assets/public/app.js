@@ -25,11 +25,7 @@ var name = getInputValue('name');
 var email = getInputValue('email');
 var message = getInputValue('message');
 
-function pageLoaded(){
-    document.getElementById('commentListings').reset();
-}
 
-window.onload = pageLoaded();
 
 function gotData(data){
 
@@ -41,20 +37,32 @@ function gotData(data){
     var keys = Object.keys(tributeMessages)
     for (var i =0; i<keys.length; i++){
         var k = keys[i];
-        var name = tributeMessages[k].name;
         var email = tributeMessages[k].email;
         var message = tributeMessages[k].message;
+        var name = tributeMessages[k].name;
 
         // var li = document.createElement('li', name + ': ' 
         // + email + ': '
         // +  message)
         // li.className('commentListing')
         // li.$('#commentList').append(parent())
-        $('<li>').text(name).prependTo('.comments');
+    
         $('<li>').text(message).prependTo('.comments');
-
+        $('<span>').text(name).prependTo('.comments');
     }
 }
+function pageLoaded(){
+    document.getElementById('commentListings').reset();
+}
+$(document).ready(function(){
+    
+
+    $("button").click(function(){
+        location.reload(true);
+        pageLoaded();
+
+    });
+});
 
 function errData(err){
     console.error(err)
