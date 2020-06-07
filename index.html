@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Obituary</title>
@@ -14,6 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700;800&display=swap" rel="stylesheet">
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
@@ -27,6 +29,8 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#funeral">Funeral Details</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#tribute">Tribute</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#gallery">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#memorialWall">Memorial Wall</a></li>
+
                     </ul>
                 </div>
             </div>
@@ -43,29 +47,7 @@
                         April 21, 1951 - May 16, 2020 
                     </h4>
                 </div>
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-
-<!--               
-                    <div class="row">
-                        <div class="col-lg-4 col-sm-4 mb-4">
-                            <div class="team-member-profile">
-                            <img class="img-fluid-profile"  src="assets/img/gallery/final15.jpeg" alt="" />
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 mb-4">
-                            <div class="masthead-heading text-capitalize-headings">
-                                <h2>
-                                    Akon S W Oton
-                                </h2>
-                                <h4>
-                                    April 21, 1951 - May 16, 2020 
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-sm-4 mb-4">
-                            <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div> -->
+                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
             </div>
         </header>
         <!-- funeral-->
@@ -107,7 +89,7 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Tribute</h2>
                 </div>
-            <section id="content" class="body">
+            <div id="content" class="body">
                 <div class="alert"> You message has been sent</div>
                 <form id="tributeForm" novalidate="novalidate" name="sentMessage">
                     <!-- <form id="tributeForm" name="sentMessage" method="POST" action="post_comment.php" novalidate="novalidate"> -->
@@ -134,23 +116,18 @@
                         <button class="btn btn-primary btn-xl text-uppercase" type="submit">Send Message</button>
                     </div>
                 </form>
-                <div id="commentListings">
-                    <ul class="clearfix comments">
-        
-                </ul>
-                </div>
-                
-                <!-- <header>
-                    <h2  class="section-heading text-uppercase">Comments</h2>
-                </header> -->
-                    <!-- <ul class="clearfix comments" id="commentList">
-                        <li>I left a comment...</li>
-                        <li>I left another comment...</li>
-                    </ul> -->
+               
             </div>
-        </section>
+        </div>
 	</section>
-       
+    <section class="page-section bg-light" id="memorialWall">
+        <div  class="container" id="commentListings">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Memorial Wall</h2>
+            </div>
+                <ul class="clearfix comments"></ul>
+            </div>
+    </section>
         <!-- gallery Grid-->
         <section class="page-section bg-light" id="gallery">
             <div class="container">
@@ -158,19 +135,19 @@
                     <h2 class="section-heading text-uppercase">Gallery</h2>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/img1.jpg" alt=""
                             />
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/img2.jpg" alt=""
                             />
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/img3.jpg" alt=""
                             />
@@ -178,19 +155,19 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/final6.jpeg" alt=""
                             />
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/final5.jpeg" alt=""
                             />
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/img4.jpg" alt=""
                             />
@@ -198,62 +175,45 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                             <img class="img-fluid" src="assets/img/gallery/final14.jpeg" alt=""
                         />
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/final12.jpeg" alt=""
                             />
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/img8.jpeg" alt=""
                             />
                         </div>
                     </div>
                 </div>
-                <!-- <div class="row">
-                    <div class="col-lg-4">
+                <div class="row">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/final9.jpeg" alt=""
                             />
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
                                 <img class="img-fluid" src="assets/img/gallery/img7.jpeg" alt=""
                             />
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-sm-6 mb-4">
                         <div class="gallery-item">
-                                <img class="img-fluid" src="assets/img/gallery/img8.jpeg" alt=""
+                                <img class="img-fluid" src="assets/img/gallery/img6.jpeg" alt=""
                             />
                         </div>
                     </div>
-                </div> -->
-                <!-- <div class="row">
-                    <div class="col-lg-4">
-                        <div class="gallery-item">
-                                <img class="img-fluid" src="assets/img/gallery/final14.jpeg" alt=""
-                            />
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                    
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="gallery-item">
-                                <img class="img-fluid" src="assets/img/gallery/final12.jpeg" alt=""
-                            />
-                        </div>
-                    </div>
-                </div> -->
+                </div>
             </div>
         </section>
         <!-- Footer-->
@@ -262,7 +222,7 @@
                 <div class="row align-items-center footer-padding">
                     <div class="col-lg-4 text-lg-left">Copyright © 2020 <a href="https://friedamusa.com/">Frieda Musa</a></div>
                     <div class="col-lg-4 my-3 my-lg-0">
-                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
                     </div>
                     <div class="col-lg-4 text-lg-right"><a class="mr-3" href="#!">Privacy Policy</a><a href="#!">Terms of Use</a></div>
                 </div>
