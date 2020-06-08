@@ -10524,7 +10524,6 @@ vertical-align: baseline;
 ul.clearfix.comments span{
   text-transform: capitalize;
   float: left;
-  margin-right:0;
   font-weight: bold;
   padding-right: 1em;
   padding-top: .5em;
