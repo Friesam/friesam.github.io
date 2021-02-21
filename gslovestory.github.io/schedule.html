@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
 		<title>Olasunkanmi & Oluwatogbekele</title>
@@ -11,577 +6,112 @@
         <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" /> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.0/css/bootstrap.css" />
-		<link type="text/css" rel="stylesheet" href="https://source.zoom.us/1.9.0/css/react-select.css" />
-		<meta name="format-detection" content="telephone=no">
+		<link type="text/css" rel="stylesheet" href="assets/css/schedule.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<script src="index.js"></script>
-		<script scr="meeting.js"></script>
         <script defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCsgpb5tf_3nKKTdU90ZhDdxOFovTqYH0&callback=initMap&libraries=&v=weekly"
         defer
         ></script>
-        <script src="map.js"></script>
+        <script src="assets/js/map.js"></script>
 	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<h1>Schedule</h1>
-						<p>Lets Plan Together & Be Prompt!</p>
-						<footer class="major">
-							<ul class="actions special">
-								<li><a href="index.html" class="button">Go Back</a></li>
-							</ul>
-						</footer>
-                    </header>
-                    <style>
-                        	#map {
-		height: 400px;
-		/* The height is 400 pixels */
-		width: 100%;
-		/* The width is the width of the web page */
-	  }
-                        body {	
-		margin: 0;
-		padding: 0;
-		background: linear-gradient(315deg, rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg,rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg,  rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-
-		
-		color: rgb(50,50,50);
-		font-family: 'Open Sans', sans-serif;
-		font-size: 112.5%;
-		line-height: 1.6em;
-	  }
-	  
-	  /* ================ The Timeline ================ */
-      
-      #map{
-        float:left;
-        width:100%;
-        height:100%"
-      }
-      .icon{
-        width:100%;
-        font-size:24px;
-        margin-left: -.5em;
-        display: block;
-      }
-      .google_direction{
-          font-size: 10px;
-      }
-	  .timeline {
-		position: relative;
-		width: 660px;
-		margin: 0 auto;
-		margin-top: 20px;
-		padding: 1em 0;
-		list-style-type: none;
-	  }
-	  
-	  .timeline:before {
-		position: absolute;
-		left: 50%;
-		top: 0;
-		content: ' ';
-		display: block;
-		width: 6px;
-		height: 100%;
-		margin-left: -3px;
-		background: linear-gradient(315deg, rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-		background-image: url("images/overlay.png"), -moz-linear-gradient(45deg,rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-		background-image: url("images/overlay.png"), -webkit-linear-gradient(45deg, rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-		background-image: url("images/overlay.png"), -ms-linear-gradient(45deg,  rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-		background-image: url("images/overlay.png"), linear-gradient(45deg, rgba(210,212,195,1) 15%, rgba(212,175,55,0.8477766106442577) 85%);
-
-		
-		z-index: 5;
-	  }
-	  
-	  .timeline li {
-		padding: 1em 0;
-	  }
-	  
-	  .timeline li:after {
-		content: "";
-		display: block;
-		height: 0;
-		clear: both;
-		visibility: hidden;
-	  }
-	  
-	  .direction-l {
-		position: relative;
-		width: 300px;
-		float: left;
-		text-align: right;
-	  }
-	  
-	  .direction-r {
-		position: relative;
-		width: 300px;
-		float: right;
-	  }
-	  
-	  .flag-wrapper {
-		position: relative;
-		display: inline-block;
-		
-		text-align: center;
-	  }
-	  
-	  .flag {
-		position: relative;
-		display: inline;
-		background: rgb(248,248,248);
-		padding: 6px 10px;
-		border-radius: 5px;
-		
-		font-weight: 600;
-		text-align: left;
-	  }
-	  
-	  .direction-l .flag {
-		-webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-		-moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-		box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-	  }
-	  
-	  .direction-r .flag {
-		-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-		-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-		box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
-	  }
-	  
-	  .direction-l .flag:before,
-	  .direction-r .flag:before {
-		position: absolute;
-		top: 50%;
-		right: -40px;
-		content: ' ';
-		display: block;
-		width: 12px;
-		height: 12px;
-		margin-top: -10px;
-		background: #fff;
-		border-radius: 10px;
-		border: 4px solid rgb(255,80,80);
-		z-index: 10;
-	  }
-	  
-	  .direction-r .flag:before {
-		left: -40px;
-	  }
-	  
-	  .direction-l .flag:after {
-		content: "";
-		position: absolute;
-		left: 100%;
-		top: 50%;
-		height: 0;
-		width: 0;
-		margin-top: -8px;
-		border: solid transparent;
-		border-left-color: rgb(248,248,248);
-		border-width: 8px;
-		pointer-events: none;
-	  }
-	  
-	  .direction-r .flag:after {
-		content: "";
-		position: absolute;
-		right: 100%;
-		top: 50%;
-		height: 0;
-		width: 0;
-		margin-top: -8px;
-		border: solid transparent;
-		border-right-color: rgb(248,248,248);
-		border-width: 8px;
-		pointer-events: none;
-	  }
-	  
-	  .time-wrapper {
-		display: inline;
-		
-		line-height: 1em;
-		font-size: 0.66666em;
-		color: rgb(250,80,80);
-		vertical-align: middle;
-	  }
-	  
-	  .direction-l .time-wrapper {
-		float: left;
-	  }
-	  
-	  .direction-r .time-wrapper {
-		float: right;
-	  }
-	  
-	  .time {
-		display: inline-block;
-		padding: 4px 6px;
-		background: rgb(248,248,248);
-	  }
-	  
-	  .desc {
-		margin: 1em 0.75em 0 0;
-		
-		font-size: 0.77777em;
-		font-style: italic;
-		line-height: 1.5em;
-	  }
-	  
-	  .direction-r .desc {
-		margin: 1em 0 0 0.75em;
-	  }
-	  
-	  /* ================ Timeline Media Queries ================ */
-	  
-	  @media screen and (max-width: 660px) {
-	  
-	  .timeline {
-		   width: 100%;
-		  padding: 4em 0 1em 0;
-	  }
-	  
-	  .timeline li {
-		  padding: 2em 0;
-	  }
-	  
-	  .direction-l,
-	  .direction-r {
-		  float: none;
-		  width: 100%;
-	  
-		  text-align: center;
-	  }
-	  
-	  .flag-wrapper {
-		  text-align: center;
-	  }
-	  
-	  .flag {
-		  background: rgb(255,255,255);
-		  z-index: 15;
-	  }
-	  
-	  .direction-l .flag:before,
-	  .direction-r .flag:before {
-		position: absolute;
-		top: -30px;
-		  left: 50%;
-		  content: ' ';
-		  display: block;
-		  width: 12px;
-		  height: 12px;
-		  margin-left: -9px;
-		  background: #fff;
-		  border-radius: 10px;
-		  border: 4px solid rgb(255,80,80);
-		  z-index: 10;
-	  }
-	  
-	  .direction-l .flag:after,
-	  .direction-r .flag:after {
-		  content: "";
-		  position: absolute;
-		  left: 50%;
-		  top: -8px;
-		  height: 0;
-		  width: 0;
-		  margin-left: -8px;
-		  border: solid transparent;
-		  border-bottom-color: rgb(255,255,255);
-		  border-width: 8px;
-		  pointer-events: none;
-	  }
-	  
-	  .time-wrapper {
-		  display: block;
-		  position: relative;
-		  margin: 4px 0 0 0;
-		  z-index: 14;
-	  }
-	  
-	  .direction-l .time-wrapper {
-		  float: none;
-	  }
-	  
-	  .direction-r .time-wrapper {
-		  float: none;
-	  }
-	  
-	  .desc {
-		  position: relative;
-		  margin: 1em 0 0 0;
-		  padding: 1em;
-		  background: rgb(245,245,245);
-		  -webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-		  -moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
-		  box-shadow: 0 0 1px rgba(0,0,0,0.20);
-		  
-		z-index: 15;
-      }
-	  
-	  .direction-l .desc,
-	  .direction-r .desc {
-		  position: relative;
-		  margin: 1em 1em 0 1em;
-		  padding: 1em;
-		  
-		z-index: 15;
-	  }
-	  .sdk-select {
-            height: 34px;
-            border-radius: 4px;
-        }
-		
-		.websdktest button {
-            float: right;
-            margin-left: 5px;
-        }
-        #nav-tool {
-            margin-bottom: 0px;
-        }
-
-        #show-test-tool {
-            position: absolute;
-            top: 100px;
-            left: 0;
-            display: block;
-            z-index: 99999;        
-        }
-        #display_name {
-            width: 250px;
-        }
-        
-
-        #websdk-iframe {
-            width: 700px;
-            height: 500px;
-            border: 1px;
-            border-color: red;
-            border-style: dashed;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            left: 50%;
-            margin: 0;
-        }
-	  
-	  }
-	  
-	  @media screen and (min-width: 400px) and( max-width: 660px) {
-	  
-	  .direction-l .desc,
-	  .direction-r .desc {
-		  margin: 1em 4em 0 4em;
-	  }
-	  
-	  }
-                    </style>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Content -->
-							<section id="content" class="main">
-								<!-- <span class="image main"><img src="images/img4.jpeg" alt="" /></span> -->
-								<h2>Wedding Schdeule </h2>
-                                <hr>
-							
-                                <!-- The Timeline -->
-                                <body>
-
-                               
-
-                            <ul class="timeline">
-
-                                <!-- Item 1 -->
-                                <li>
-                                    <div class="direction-r">
-                                        <div class="flag-wrapper">
-                                            <span class="flag">Church Wedding</span>
-                                            <span class="time-wrapper"><span class="time">Saturday, May 22 2021</span></span>
-                                        </div>
-                                        <b>Dress Code:Cocktail Attire</b>
-                                        <div class="desc">For all those of you who are staying a day longer, we are going to setup a breakfast, stay tuned.</div>
-                                    </div>
-                                </li>
-                            
-                                <!-- Item 2 -->
-                                <li>
-                                    <div class="direction-l">
-                                        <div class="flag-wrapper">
-                                            <span class="flag">Traditional Engagement</span>
-                                            <span class="time-wrapper"><span class="time">Friday, May 20 2021</span></span>
-                                        </div>
-                                        <b>Dress Code:Cocktail Attire</b>
-										<div class="desc">We're getting married! We'd like to share a few words with everyone. Dinner, drinks, and dancing to follow!</div>
-										<div id="navbar" class="websdktest">
-											<form class="navbar-form navbar-right" id="meeting_form">
-												<div class="form-group">
-													<input type="text" name="display_name" id="display_name" value="1.9.0#Local" maxLength="100"
-														placeholder="Name" class="form-control" required>
+		<div id="wrapper">
+			<!-- Header -->
+			<header id="header">
+				<h1>Schedule</h1>
+				<p>Lets Plan Together & Be Prompt!</p>
+				<footer class="major">
+					<ul class="actions special">
+						<li><a href="index.html" class="button">Go Back</a></li>
+					</ul>
+				</footer>
+			</header>
+		<!-- Main -->
+			<div id="main">
+				<!-- Content -->
+				<div class="timeline">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-12">
+          						<div class="timeline-container">
+									<div class="timeline-end">
+										<p>Now</p>
+									</div>
+									<div class="timeline-continue">
+										<div class="row timeline-right">
+										  	<div class="col-md-6">
+												<p class="timeline-date"> Saturday, May 22 2021 </p>
+										  	</div>
+										  	<div class="col-md-6">
+												<div class="timeline-box">
+													<div class="timeline-icon">
+														<i class="fa fa-gift"></i>
+													</div>
+													<div class="timeline-text">
+														<h3>Church Wedding</h3>
+														<p><b>Dress Code: Cocktail Attire</b></p>
+														<div class="desc">For all those of you who are staying a day longer, we are going to setup a breakfast, stay tuned. </div>
+														<button type="button" id='zoomcall'>Join Wedding!</button>
+													</div>
 												</div>
-												<div class="form-group">
-													<input type="text" name="meeting_number" id="meeting_number" value="" maxLength="200"
-														style="width:150px" placeholder="Meeting Number" class="form-control" required> </div>
-												<div class="form-group">
-													<input type="text" name="meeting_pwd" id="meeting_pwd" value="" style="width:150px"
-														maxLength="32" placeholder="Meeting Password" class="form-control"> </div>
-												<div class="form-group">
-													<input type="text" name="meeting_email" id="meeting_email" value="" style="width:150px"
-														maxLength="32" placeholder="Email option" class="form-control">
-												</div>
-												<div class="form-group">
-													<select id="meeting_role" class="sdk-select">
-														<option value=0>Attendee</option>
-														<option value=1>Host</option>
-														<option value=5>Assistant</option>
-													</select>
-												</div>
-																	<div class="form-group">
-													<select id="meeting_china" class="sdk-select">
-														<option value=0>Global</option>
-														<option value=1>China</option>
-													</select>
-												</div>
-												<div class="form-group">
-													<select id="meeting_lang" class="sdk-select">
-														<option value="en-US">English</option>
-														<option value="de-DE">German Deutsch</option>
-														<option value="es-ES">Spanish Español</option>
-														<option value="fr-FR">French Français</option>
-														<option value="jp-JP">Japanese 日本語</option>
-														<option value="pt-PT">Portuguese Portuguese</option>
-														<option value="ru-RU">Russian Русский</option>
-														<option value="zh-CN">Chinese 简体中文</option>
-														<option value="zh-TW">Chinese 繁体中文</option>
-														<option value="ko-KO">Korean 한국어</option>
-														<option value="vi-VN">Vietnamese Tiếng Việt</option>
-														<option value="it-IT">Italian italiano</option>
-													</select>
-												</div>
-							
-												<input type="hidden" value="" id="copy_link_value"/>
-												<button type="submit" class="btn btn-primary" id="join_meeting">Join</button>
-												<button type="submit" class="btn btn-primary" id="clear_all">Clear</button>
-												<button type="button" link="" onclick="window.copyJoinLink('#copy_join_link')" class="btn btn-primary" id="copy_join_link">Copy Direct join link</button>
-									   
-							
-											</form>
+											</div>
 										</div>
-										
-                                    </div>
-                                </li>
-
-                                <!-- Item 3 -->
-                                <li>
-                                    <div class="direction-r">
-                                        <div class="flag-wrapper">
-                                            <span class="flag">Wedding Party Photoshoot 📷</span>
-                                            <span class="time-wrapper"><span class="time">2008 - 2011</span></span>
-                                        </div>
-                                        <div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
-                                    </div>
-                                </li>
-                            
-                                <!-- item 4 -->
-                                <li>
-                                    <div class="direction-l">
-                                        <div class="flag-wrapper">
-                                            <span class="flag">Wedding Reception</span>
-                                            <span class="time-wrapper"><span class="time">Thursday, May 19 2021</span></span>
-                                            <div class="icon">
-                                                <br>
-                                                <i class="fa fa-map-marker"></i><a href="http://maps.google.com/?q=The International Conference Centre University of Ibadan, Ibadan, Nigeria" target="_blank" class="google_direction">The International Conference Centre University of Ibadan, Ibadan, Nigeria</a>
-                                            </div>
-                                            <div id="map"></div>   
-                                        </div>
-                                    </div>
-                                </li>
-                                
-                            </ul>
-                        </body>
-						
-							</section>
-
+										<div class="row timeline-left">
+										  	<div class="col-md-6">
+												<div class="timeline-box">
+													<div class="timeline-text">
+														<h3>Wedding Party Photoshoot </h3>
+														<div class="desc">A description of all the lectures and courses I have taken and my final degree? </div>
+													</div>
+													<div class="timeline-icon d-md-block d-none">
+														<i class="fa fa-camera-retro"></i>
+													</div>
+												</div>
+										  	</div>
+										  	<div class="col-md-6 d-md-block d-none">
+												<p class="timeline-date"> May 2021 </p>
+											</div>
+										</div>
+										<div class="row timeline-right">
+										  	<div class="col-md-6">
+												<p class="timeline-date"> Thrusday, 19 May 2021 </p>
+										  	</div>
+											<div class="col-md-6">
+												<div class="timeline-box">
+													<div class="timeline-icon">
+														<i class="fa fa-glass-cheers"></i>
+													</div>
+													<div class="timeline-text">
+														<h3>Wedding Reception</h3>
+														<button type="button" id='zoomcall'>Join Reception!</button>
+														<br>
+														<i class="fa fa-map-marker"></i>
+														<a href="http://maps.google.com/?q=The International Conference Centre University of Ibadan, Ibadan, Nigeria" target="_blank" class="google_direction">The International Conference Centre University of Ibadan, Ibadan, Nigeria</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="timeline-start">
+										<p>2002</p>
+									</div>
+									<div class="timeline-launch">
+										<div class="timeline-box">
+										  	<div class="timeline-text">
+												<h3>Met in 2002</h3>
+												<p>Read our story</p>
+										  	</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
-
-				<!-- Footer -->
-					<footer id="footer">
-						<section>
-							<h2>Aliquam sed mauris</h2>
-							<p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
-						</section>
-						<section>
-							<h2>Etiam feugiat</h2>
-							<dl class="alt">
-								<dt>Address</dt>
-								<dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-								<dt>Phone</dt>
-								<dd>(000) 000-0000 x 0000</dd>
-								<dt>Email</dt>
-								<dd><a href="#">information@untitled.tld</a></dd>
-							</dl>
-							<ul class="icons">
-								<li><a href="#" class="icon brands fa-twitter alt"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f alt"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram alt"><span class="label">Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-github alt"><span class="label">GitHub</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble alt"><span class="label">Dribbble</span></a></li>
-							</ul>
-						</section>
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
-
+				</div>		
 			</div>
-			<!-- <div id="show-test-tool">
-				<button type="submit" class="btn btn-primary" id="show-test-tool-btn" title="show or hide top test tool">Show</button>
-			</div>
-			<script>
-				document.getElementById('show-test-tool-btn').addEventListener("click", function(e){
-					var textContent = e.target.textContent;
-					if (textContent === 'Show') {
-						document.getElementById('nav-tool').style.display = 'block';
-						document.getElementById('show-test-tool-btn').textContent = 'Hide';
-					}
-					else {
-						document.getElementById('nav-tool').style.display = 'none';
-						document.getElementById('show-test-tool-btn').textContent = 'Show';
-					}
-				})
-			</script> -->
-			<script src="node_modules/react/umd/react.production.min.js"></script>
-			<script src="node_modules/react-dom/umd/react-dom.production.min.js"></script>
-			<script src="node_modules/redux/dist/redux.min.js"></script>
-			<script src="node_modules/redux-thunk/dist/redux-thunk.min.js"></script>
-			<script src="node_modules/lodash/lodash.min.js"></script>
-		
-			<script src="tools.js"></script>
-			<script src="./static/index.min.js"></script>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
+		</div>
 	</body>
 </html>
