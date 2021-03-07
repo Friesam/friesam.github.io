@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+@import url("fontawesome-all.min.css");
+
+.registry-header{
+    font-size: xx-large;
+    text-align: center;
+}
+.align-content {
+    text-align: center;
+
+}
+.justify-content-flex-end {
+    text-align: end;
+    margin-bottom: 1px;
+}
+.paragraph-align {
+    margin-bottom: 1px;
+}

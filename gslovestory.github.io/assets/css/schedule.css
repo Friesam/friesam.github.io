@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+@import url("fontawesome-all.min.css");
+
+
 #zoomcall{
   border-radius: 12px;
 }
@@ -173,7 +177,9 @@
 }
 .timeline .timeline-icon i{
   font-size: 25px;
-  color:#4f84c4;
+  color: #5e7423;
+  /* background: linear-gradient(#5e7423, #c9df8f); */
+
 }
 .timeline .timeline-box .timeline-text{
   position: relative;
@@ -192,6 +198,27 @@
   font-size: 14px;
   font-weight: 400;
   margin-bottom:0;
+}
+
+a.google_direction {
+  color: #483949;
+} 
+
+a.google_direction:hover{
+  color: #8F9779;
+} 
+i.fa.fa-calendar {
+  color:#5e7423;
+}
+i.fa.fa-map-marker {
+  color:#5e7423;
+}
+
+.timeline-end .end{
+  background:  linear-gradient(#8F9779, #D4AF37) !important;
+}
+.timeline-start .end{
+  background:  linear-gradient(#8F9779, #D4AF37) !important;
 }
 
 @media (max-width:768px){
@@ -236,6 +263,65 @@
   .timeline .timeline-launch .timeline-box::before{
     left:30px;
     margin-left: 0;
+  }
+  body {
+    font-family: sans-serif;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+  }
+  
+  .base-timer {
+    position: relative;
+    width: 300px;
+    height: 300px;
+  }
+  
+  .base-timer__svg {
+    transform: scaleX(-1);
+  }
+  
+  .base-timer__circle {
+    fill: none;
+    stroke: none;
+  }
+  
+  .base-timer__path-elapsed {
+    stroke-width: 7px;
+    stroke: grey;
+  }
+  
+  .base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+  }
+  
+  .base-timer__path-remaining.green {
+    color: rgb(65, 184, 131);
+  }
+  
+  .base-timer__path-remaining.orange {
+    color: orange;
+  }
+  
+  .base-timer__path-remaining.red {
+    color: red;
+  }
+  
+  .base-timer__label {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
   }
 }
 
